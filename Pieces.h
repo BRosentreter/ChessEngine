@@ -4,56 +4,62 @@
 #include <string>
 #include <vector>
 
+enum PieceType {pawn, rook, knight, bishop, queen, king, none};
+
+struct coordinate {
+	int rank;
+	int file;
+};
+
 class Piece{
 protected:
 	int points;
 	bool colorWhite;
-	int max_horizontal_move;
-	int max_vertical_move;
-	std::pair<int, int> coordinates;
+	coordinate current_location;
 public:
-	virtual bool validMove(std::pair<int, int> destination);
-	virtual std::vector< std::pair<int, int> > coveredSquares();
+	virtual bool validMove(coordinate destination);
+	virtual std::vector< coordinate > coveredSquares();
+	Piece();
 
 
 };
 
-class Pawn : Piece{
+
+class Knight : public Piece{
 public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
+	bool validMove(coordinate destination);
+	std::vector< coordinate > coveredSquares();
+	Knight();
 };
 
-class Knight : Piece{
+class Bishop : public Piece{
 public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
+	bool validMove(coordinate destination);
+	std::vector< coordinate > coveredSquares();
+	Bishop();
 };
 
-class Bishop : Piece{
+class Rook : public Piece{
 public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
-};
-
-class Rook : Piece{
-public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
-
-};
-
-class Queen : Piece{
-public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
+	bool validMove(coordinate destination);
+	std::vector< coordinate > coveredSquares();
+	Rook();
 
 };
 
-class King : Piece{
+class Queen : public Piece{
 public:
-	bool validMove(std::pair<int, int> destination);
-	std::vector< std::pair<int, int> > coveredSquares();
+	bool validMove(coordinate destination);
+	std::vector< coordinate > coveredSquares();
+	Queen();
+
+};
+
+class King : public Piece{
+public:
+	bool validMove(coordinate destination);
+	std::vector< coordinate > coveredSquares();
+	King();
 
 };
 
