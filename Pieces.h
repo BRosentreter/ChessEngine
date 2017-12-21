@@ -56,6 +56,7 @@ public:
 };
 
 class King : public Piece{
+	bool has_moved;
 public:
 	bool validMove(coordinate destination);
 	std::vector< coordinate > coveredSquares();

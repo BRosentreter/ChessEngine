@@ -47,16 +47,34 @@ bool Bishop::validMove(coordinate destination){
 	return false;
 }
 
-King::King(){}
+King::King(){
+	has_moved = false;
+}
 
 bool King::validMove(coordinate destination){
-	
+	int vertical_move = std::fabs(destination.rank - current_location.rank);
+	int horizontal_move = std::fabs(destination.file - current_location.file);
+
+	if(vertical_move == 1 || vertical_move == 0){
+		if(horizontal_move == 1 || vertical_move == 0){
+			return true;
+		}
+	}
+	if(!has_moved){
+		if(horizontal_move == 2 && vertical_move == 0){
+			return true;
+		}
+	}
+	return false;
 }
 
 Queen::Queen(){}
 
 bool Queen::validMove(coordinate destination){
+	int vertical_move = std::fabs(destination.rank - current_location.rank);
+	int horizontal_move = std::fabs(destination.file - current_location.file);
 	
+
 }
 
 Piece::Piece(){}
