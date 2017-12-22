@@ -1,9 +1,11 @@
 #include "Board.h"
 
 
-Board::Board(){}
+Board::Board(){
+
+}
 
 
 void Board::updateBoard(std::string move){
-
+	
 }

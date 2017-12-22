@@ -14,6 +14,7 @@ int main(){
 		cout << "Please enter a move: ";
 		cin >> s;
 		cout << c.validInput(s) << endl;
+		c.destinationCoordinates(s);
 
 	}
 	cout << "Test" << endl;

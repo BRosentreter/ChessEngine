@@ -9,10 +9,12 @@ class Controller{
 	Board black_board;
 	Board white_board;
 	Board full_board;
+	bool current_color_turn_white;
 public:
 	bool isMoveLegal(std::string);
-	std::pair<int, int> destinationCoordinates(std::string);
+	coordinate destinationCoordinates(std::string);
 	std::string validInput(std::string);
+	void updateBoard(std::string);
 };
 
 #endif

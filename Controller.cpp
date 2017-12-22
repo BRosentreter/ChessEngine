@@ -2,12 +2,48 @@
 #include <set>
 #include <stdlib.h>
 
-bool Controller::isMoveLegal(std::string move){
-	
+Controller::Controller(){
+	current_color_turn_white = true;
 }
 
-std::pair<int, int> Controller::destinationCoordinates(std::string move){
+bool Controller::isMoveLegal(std::string move){
 
+
+}
+
+coordinate Controller::destinationCoordinates(std::string move){
+	coordinate output;
+	switch(move[move.size()-2]){
+		case 'a':
+			output = {atoi(&move[move.size()-1])-1, 0};
+			break;
+		case 'b':
+			output = {atoi(&move[move.size()-1])-1, 1};
+			break;
+		case 'c':
+			output = {atoi(&move[move.size()-1])-1, 2};
+			break;
+		case 'd':
+			output = {atoi(&move[move.size()-1])-1, 3};
+			break;
+		case 'e':
+			output = {atoi(&move[move.size()-1])-1, 4};
+			break;
+		case 'f':
+			output = {atoi(&move[move.size()-1])-1, 5};
+			break;
+		case 'g':
+			output = {atoi(&move[move.size()-1])-1, 6};
+			break;
+		case 'h':
+			output = {atoi(&move[move.size()-1])-1, 7};
+			break;
+		default:
+			output = {-1,-1};
+			break;
+	}
+	std::cout << output.file <<  " " << output.rank << std::endl;
+	return output;
 }
 
 
@@ -64,7 +100,15 @@ std::string Controller::validInput(std::string move){
 	return "false";
 }
 
-
+void Controller::updateBoard(std::string move){
+	if(current_color_turn_white){
+		white_board.updateBoard(move);
+	}	
+	else{
+		black_board.updateBoard(move);
+	}
+	return;
+}
 
 
 

@@ -16,8 +16,10 @@ bool Knight::validMove(coordinate destination){
 }
 std::vector< coordinate > Knight::coveredSquares(){
 	std::vector< coordinate > output;
-
+	return output;
 }
+
+
 
 Rook::Rook(){}
 
@@ -33,6 +35,10 @@ bool Rook::validMove(coordinate destination){
 	return false;
 
 }
+std::vector< coordinate > Rook::coveredSquares(){
+	std::vector< coordinate > output;
+	return output;
+}
 
 Bishop::Bishop(){}
 
@@ -45,6 +51,10 @@ bool Bishop::validMove(coordinate destination){
 		}
 	}
 	return false;
+}
+std::vector< coordinate > Bishop::coveredSquares(){
+	std::vector< coordinate > output;
+	return output;
 }
 
 King::King(){
@@ -67,6 +77,10 @@ bool King::validMove(coordinate destination){
 	}
 	return false;
 }
+std::vector< coordinate > King::coveredSquares(){
+	std::vector< coordinate > output;
+	return output;
+}
 
 Queen::Queen(){}
 
@@ -76,6 +90,17 @@ bool Queen::validMove(coordinate destination){
 	
 
 }
+std::vector< coordinate > Queen::coveredSquares(){
+	std::vector< coordinate > output;
+	return output;
+}
 
 Piece::Piece(){}
+bool Piece::validMove(coordinate destination){
+	return false;
+}
+std::vector< coordinate > Piece::coveredSquares(){
+	std::vector< coordinate > output;
+	return output;
+}
 
