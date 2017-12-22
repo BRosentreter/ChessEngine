@@ -2,6 +2,7 @@
 #define PIECES_H
 
 #include <string>
+#include <cmath>
 #include <vector>
 
 enum PieceType {pawn, rook, knight, bishop, queen, king, none};

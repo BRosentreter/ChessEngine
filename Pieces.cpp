@@ -88,7 +88,7 @@ bool Queen::validMove(coordinate destination){
 	int vertical_move = std::fabs(destination.rank - current_location.rank);
 	int horizontal_move = std::fabs(destination.file - current_location.file);
 	
-
+    return false;
 }
 std::vector< coordinate > Queen::coveredSquares(){
 	std::vector< coordinate > output;

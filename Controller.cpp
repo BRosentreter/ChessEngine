@@ -2,12 +2,12 @@
 #include <set>
 #include <stdlib.h>
 
-Controller::Controller(){
-	current_color_turn_white = true;
-}
+//Controller::Controller(){
+//	current_color_turn_white = true;
+//}
 
 bool Controller::isMoveLegal(std::string move){
-
+    return false;
 
 }
 
