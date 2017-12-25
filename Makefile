@@ -2,7 +2,7 @@ CC=g++
 CFLAGS = -Wall -std=c++11
 
 all: ChessSimulator.cpp board.o controller.o pieces.o
-	g++ ChessSimulator.cpp -Wall -std=c++11 -o exe controller.o board.o pieces.o
+	g++ -framework OpenGL -framework GLUT -Wno-deprecated ChessSimulator.cpp -Wall -std=c++11 -o exe controller.o board.o pieces.o
 
 
 pieces.o: Pieces.h Pieces.cpp

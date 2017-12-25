@@ -14,6 +14,8 @@
 		B30FF69A1FECB54F00A52BBE /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6921FECB54F00A52BBE /* Pawn.cpp */; };
 		B30FF69B1FECB54F00A52BBE /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6941FECB54F00A52BBE /* Controller.cpp */; };
 		B30FF69C1FECB54F00A52BBE /* ChessSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */; };
+		B30FF6B21FF0507100A52BBE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FF6B11FF0507100A52BBE /* OpenGL.framework */; };
+		B30FF6B41FF0520100A52BBE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FF6B31FF0520100A52BBE /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,13 +37,14 @@
 		B30FF68C1FECB54F00A52BBE /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = ../../Board.h; sourceTree = "<group>"; };
 		B30FF68D1FECB54F00A52BBE /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Board.cpp; path = ../../Board.cpp; sourceTree = "<group>"; };
 		B30FF68E1FECB54F00A52BBE /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../Makefile; sourceTree = "<group>"; };
-		B30FF68F1FECB54F00A52BBE /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Main.h; path = ../../Main.h; sourceTree = "<group>"; };
 		B30FF6901FECB54F00A52BBE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		B30FF6911FECB54F00A52BBE /* Pawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pawn.h; path = ../../Pawn.h; sourceTree = "<group>"; };
 		B30FF6921FECB54F00A52BBE /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pawn.cpp; path = ../../Pawn.cpp; sourceTree = "<group>"; };
 		B30FF6931FECB54F00A52BBE /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../../Controller.h; sourceTree = "<group>"; };
 		B30FF6941FECB54F00A52BBE /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../../Controller.cpp; sourceTree = "<group>"; };
 		B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChessSimulator.cpp; path = ../../ChessSimulator.cpp; sourceTree = "<group>"; };
+		B30FF6B11FF0507100A52BBE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B30FF6B31FF0520100A52BBE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30FF6B41FF0520100A52BBE /* GLUT.framework in Frameworks */,
+				B30FF6B21FF0507100A52BBE /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 			children = (
 				B30FF6821FECB54000A52BBE /* Chess */,
 				B30FF6811FECB54000A52BBE /* Products */,
+				B30FF6B01FF0507100A52BBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +85,6 @@
 				B30FF68C1FECB54F00A52BBE /* Board.h */,
 				B30FF68D1FECB54F00A52BBE /* Board.cpp */,
 				B30FF68E1FECB54F00A52BBE /* Makefile */,
-				B30FF68F1FECB54F00A52BBE /* Main.h */,
 				B30FF6901FECB54F00A52BBE /* README.md */,
 				B30FF6911FECB54F00A52BBE /* Pawn.h */,
 				B30FF6921FECB54F00A52BBE /* Pawn.cpp */,
@@ -88,6 +93,15 @@
 				B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */,
 			);
 			path = Chess;
+			sourceTree = "<group>";
+		};
+		B30FF6B01FF0507100A52BBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B30FF6B31FF0520100A52BBE /* GLUT.framework */,
+				B30FF6B11FF0507100A52BBE /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 				B30FF6891FECB54000A52BBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

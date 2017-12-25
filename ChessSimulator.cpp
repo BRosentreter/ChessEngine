@@ -1,6 +1,12 @@
+
+
+
 #include "Pieces.h"
 #include "Board.h"
 #include "Controller.h"
+#include "opengl/gl.h"
+#include "GLUT/glut.h"
+
 
 using namespace std;
 
@@ -9,7 +15,7 @@ using namespace std;
 int main(int argc, char ** argv){
 
 
-	Board b;
+    Board b;
 	Controller c;
 	string s;
 	while(1){
@@ -19,6 +25,5 @@ int main(int argc, char ** argv){
 		c.destinationCoordinates(s);
 
 	}
-	cout << "Test" << endl;
 	return 0;
 }
