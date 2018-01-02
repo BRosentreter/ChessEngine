@@ -5,25 +5,17 @@
 #include "Board.h"
 #include "Controller.h"
 #include "opengl/gl.h"
+#include "GLViewController.h"
 #include "GLUT/glut.h"
 
 
 using namespace std;
 
 
-
 int main(int argc, char ** argv){
 
+    GLViewController gl_view_controller;
+    gl_view_controller.viewMain(argc, argv);
 
-    Board b;
-	Controller c;
-	string s;
-	while(1){
-		cout << "Please enter a move: ";
-		cin >> s;
-		cout << c.validInput(s) << endl;
-		c.destinationCoordinates(s);
-
-	}
 	return 0;
 }

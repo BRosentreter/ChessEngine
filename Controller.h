@@ -3,6 +3,7 @@
 
 #include "Board.h"
 #include "Pieces.h"
+#include <set>
 #include <string>
 
 class Controller{
@@ -10,11 +11,15 @@ class Controller{
 	Board white_board;
 	Board full_board;
 	bool current_color_turn_white;
+    std::set<char> pieceSymbols;
+    std::set<char> files;
 public:
+    Controller();
 	bool isMoveLegal(std::string);
 	coordinate destinationCoordinates(std::string);
 	std::string validInput(std::string);
 	void updateBoard(std::string);
+    
 };
 
 #endif

@@ -13,9 +13,11 @@
 		B30FF6991FECB54F00A52BBE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6901FECB54F00A52BBE /* README.md */; };
 		B30FF69A1FECB54F00A52BBE /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6921FECB54F00A52BBE /* Pawn.cpp */; };
 		B30FF69B1FECB54F00A52BBE /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6941FECB54F00A52BBE /* Controller.cpp */; };
-		B30FF69C1FECB54F00A52BBE /* ChessSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */; };
+		B30FF69C1FECB54F00A52BBE /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B30FF6951FECB54F00A52BBE /* Main.cpp */; };
 		B30FF6B21FF0507100A52BBE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FF6B11FF0507100A52BBE /* OpenGL.framework */; };
 		B30FF6B41FF0520100A52BBE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FF6B31FF0520100A52BBE /* GLUT.framework */; };
+		B3C97DF01FF1E2E2005AB9FB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C97DEF1FF1E2E2005AB9FB /* GLKit.framework */; };
+		B3FF99C81FF995D9002EBC08 /* GLViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3FF99C61FF995D9002EBC08 /* GLViewController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,9 +44,12 @@
 		B30FF6921FECB54F00A52BBE /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pawn.cpp; path = ../../Pawn.cpp; sourceTree = "<group>"; };
 		B30FF6931FECB54F00A52BBE /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../../Controller.h; sourceTree = "<group>"; };
 		B30FF6941FECB54F00A52BBE /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Controller.cpp; path = ../../Controller.cpp; sourceTree = "<group>"; };
-		B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChessSimulator.cpp; path = ../../ChessSimulator.cpp; sourceTree = "<group>"; };
+		B30FF6951FECB54F00A52BBE /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ../../Main.cpp; sourceTree = "<group>"; };
 		B30FF6B11FF0507100A52BBE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B30FF6B31FF0520100A52BBE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		B3C97DEF1FF1E2E2005AB9FB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		B3FF99C61FF995D9002EBC08 /* GLViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLViewController.cpp; path = ../../GLViewController.cpp; sourceTree = "<group>"; };
+		B3FF99C71FF995D9002EBC08 /* GLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewController.h; path = ../../GLViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C97DF01FF1E2E2005AB9FB /* GLKit.framework in Frameworks */,
 				B30FF6B41FF0520100A52BBE /* GLUT.framework in Frameworks */,
 				B30FF6B21FF0507100A52BBE /* OpenGL.framework in Frameworks */,
 			);
@@ -80,6 +86,8 @@
 		B30FF6821FECB54000A52BBE /* Chess */ = {
 			isa = PBXGroup;
 			children = (
+				B3FF99C61FF995D9002EBC08 /* GLViewController.cpp */,
+				B3FF99C71FF995D9002EBC08 /* GLViewController.h */,
 				B30FF68A1FECB54F00A52BBE /* Pieces.h */,
 				B30FF68B1FECB54F00A52BBE /* Pieces.cpp */,
 				B30FF68C1FECB54F00A52BBE /* Board.h */,
@@ -90,7 +98,7 @@
 				B30FF6921FECB54F00A52BBE /* Pawn.cpp */,
 				B30FF6931FECB54F00A52BBE /* Controller.h */,
 				B30FF6941FECB54F00A52BBE /* Controller.cpp */,
-				B30FF6951FECB54F00A52BBE /* ChessSimulator.cpp */,
+				B30FF6951FECB54F00A52BBE /* Main.cpp */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 		B30FF6B01FF0507100A52BBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3C97DEF1FF1E2E2005AB9FB /* GLKit.framework */,
 				B30FF6B31FF0520100A52BBE /* GLUT.framework */,
 				B30FF6B11FF0507100A52BBE /* OpenGL.framework */,
 			);
@@ -163,12 +172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30FF6971FECB54F00A52BBE /* Board.cpp in Sources */,
-				B30FF69C1FECB54F00A52BBE /* ChessSimulator.cpp in Sources */,
+				B30FF69C1FECB54F00A52BBE /* Main.cpp in Sources */,
 				B30FF6961FECB54F00A52BBE /* Pieces.cpp in Sources */,
 				B30FF6991FECB54F00A52BBE /* README.md in Sources */,
 				B30FF69A1FECB54F00A52BBE /* Pawn.cpp in Sources */,
 				B30FF6981FECB54F00A52BBE /* Makefile in Sources */,
 				B30FF69B1FECB54F00A52BBE /* Controller.cpp in Sources */,
+				B3FF99C81FF995D9002EBC08 /* GLViewController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = E4X7T6U9BJ;
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = E4X7T6U9BJ;
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

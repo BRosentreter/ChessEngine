@@ -1,10 +1,15 @@
 #include "Controller.h"
-#include <set>
 #include <stdlib.h>
+
 
 //Controller::Controller(){
 //	current_color_turn_white = true;
 //}
+
+Controller::Controller(){
+    pieceSymbols = {'N','K','Q','B','R'};
+    files = {'a','b','c','d','e','f','g','h'};
+}
 
 bool Controller::isMoveLegal(std::string move){
     return false;
@@ -48,56 +53,48 @@ coordinate Controller::destinationCoordinates(std::string move){
 
 
 std::string Controller::validInput(std::string move){
-	std::set<char> pieceSymbols = {'N','K','Q','B','R'};
-	std::set<char> files = {'a','b','c','d','e','f','g','h'};
-	switch(move.size()){
-		case 2:
-			//pawn normal move
-			if(files.find(move[0]) != files.end()){
-				if(atoi(&move[1]) > 0 && atoi(&move[1]) < 9){
-					return "normal pawn move";
-				}
-			}
-			break;
-		case 3:
-			//piece normal move
-			if(pieceSymbols.find(move[0]) != pieceSymbols.end()){
-				if(files.find(move[1]) != files.end()){
-					if(atoi(&move[2]) > 0 && atoi(&move[2]) < 9){
-						return "normal piece move";
-					}
-				}
-			}
-			//King Castle
-			else if(move == "O-O"){
-				return "king castle";
-			}
-			else{
-				return "false";
-			}
-		case 4:
-			//piece capture
-			if((pieceSymbols.find(move[0]) != pieceSymbols.end()) || files.find(move[0]) != files.end()){
-				if(move[1] == 'x'){
-					if(files.find(move[2]) != files.end()){
-						if(atoi(&move[3]) > 0 && atoi(&move[3]) < 9){
-							return "piece capture";
-						}
-					}
-				}
-			}
-			break;
-		case 5:
-			if(move == "O-O-O"){
-				return "queen castle";
-			}
-			break;
-		default:
-			return "false";
-			break;
 
-	};
-	return "false";
+    switch(move.size()){
+        case 3:
+            if(move == "O-O"){
+                std::cout <<"tete" << std::endl;
+                return "King castle";
+            }
+            else{
+                return "false";
+            }
+        case 4:
+            if(files.find(move[0]) != files.end()){
+                if(atoi(&move[1]) > 0 && atoi(&move[1]) < 9){
+
+                    if(files.find(move[2]) != files.end()){
+
+                        if(atoi(&move[3]) > 0 && atoi(&move[3]) < 9){
+
+                            return "Normal pawn move";
+                        }
+                    }
+                }
+            }
+        case 5:
+            if(move == "O-O-O"){
+                return "Queen castle";
+            }
+            if(pieceSymbols.find(move[0]) != pieceSymbols.end()){
+                if(files.find(move[1]) != files.end()){
+                    if(atoi(&move[2]) > 0 && atoi(&move[2]) < 9){
+                        if(files.find(move[3]) != files.end()){
+                            if(atoi(&move[4]) > 0 && atoi(&move[4]) < 9){
+                                return "Normal piece move";
+                            }
+                        }
+                    }
+                }
+            }
+        default:
+            return "false";
+    };
+
 }
 
 void Controller::updateBoard(std::string move){
